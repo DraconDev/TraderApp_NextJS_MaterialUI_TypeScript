@@ -28,8 +28,17 @@ const shop = (props: Props) => {
   return (
     <div>
       {Object.values(people).map((e) => {
-        // return { e };
-        <Link as={`/${e.vehicle}${e.name}`} href="/[vehicle]/[person]"></Link>;
+        console.log(e.vehicle);
+        return (
+          <div className="">
+            <Link as={`/${e.vehicle}/${e.name}`} href="/[vehicle]/[person]">
+              <a href="">
+                {e.name}'s {e.vehicle}
+              </a>
+            </Link>
+            ;
+          </div>
+        );
       })}
     </div>
   );
