@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 
 interface peopleVehicles {
   vehicle: string;
@@ -43,5 +43,7 @@ const shop = (props: Props) => {
     </div>
   );
 };
+
+const ref = useRef(shop);
 
 export default shop;
